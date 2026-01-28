@@ -3,8 +3,6 @@ kind: IPAddressPool
 metadata:
   name: default
   namespace: metallb-system
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   addresses:
     - 10.0.66.200-10.0.66.252
@@ -15,8 +13,6 @@ kind: IPAddressPool
 metadata:
   name: ipv6-default
   namespace: metallb-system
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   addresses:
     - 2001:4645:41da:66::f0-2001:4645:41da:66::ff
@@ -27,8 +23,6 @@ kind: L2Advertisement
 metadata:
   name: default-l2
   namespace: metallb-system
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
 spec:
   ipAddressPools:
     - default
